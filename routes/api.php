@@ -23,3 +23,5 @@ Route::post('/student','ApiController@create');
 Route::get('/student','ApiController@show');
 
 Route::get('/student/{id}','ApiController@showbyid');
+
+Route::put('/studentupdate/{id}','ApiController@updatebyid');
