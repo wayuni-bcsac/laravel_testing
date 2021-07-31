@@ -21,3 +21,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::post('/student','ApiController@create');
 
 Route::get('/student','ApiController@show');
+
+Route::get('/student/{id}','ApiController@showbyid');
