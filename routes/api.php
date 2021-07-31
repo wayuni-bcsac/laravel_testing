@@ -25,3 +25,5 @@ Route::get('/student','ApiController@show');
 Route::get('/student/{id}','ApiController@showbyid');
 
 Route::put('/studentupdate/{id}','ApiController@updatebyid');
+
+Route::delete('/studentdelete/{id}','ApiController@deletebyid');
