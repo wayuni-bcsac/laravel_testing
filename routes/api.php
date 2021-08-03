@@ -27,3 +27,11 @@ Route::get('/student/{id}','ApiController@showbyid');
 Route::put('/studentupdate/{id}','ApiController@updatebyid');
 
 Route::delete('/studentdelete/{id}','ApiController@deletebyid');
+
+Route::post('login', 'UserController@login');
+
+Route::post('register', 'UserController@register');
+
+Route::group(['middleware' => 'auth:api'], function(){
+Route::post('details', 'UserController@details');
+});
