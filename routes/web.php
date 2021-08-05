@@ -16,3 +16,19 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/add-user','UserController@insertRecord');
+
+Route::get('/get-phone','UserController@fetchPhoneByUser');
+
+
+
+
+
+
+
+
+
+
+
+

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\User; 
+use App\Phone;
 Use Validator;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth; 
@@ -41,4 +42,24 @@ class UserController extends Controller
         $user = Auth::user(); 
         return response()->json(['success' => $user],); 
     } 
+
+    public function insertRecord()
+    {
+           $phone = new Phone();
+           $phone->phone = "019890987";
+           $user = new User();
+           $user->name="John";
+           $user->email="john@gmail.com";
+           $user->password=bcrypt('secret3'); 
+           $user->save();
+
+            $user->phone()->save($phone);
+            return "Record has been created successfully";
+    }
+
+    public function fetchPhoneByUser()
+    {
+        $phone = User::find(7)->phone;
+        return $phone;
+    }
 }
