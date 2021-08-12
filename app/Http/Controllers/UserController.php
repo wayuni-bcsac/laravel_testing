@@ -43,6 +43,7 @@ class UserController extends Controller
         return response()->json(['success' => $user],); 
     } 
 
+
     public function addUserPhone()
     {
         $user = new User;
@@ -65,4 +66,6 @@ class UserController extends Controller
         return $phone;
     }
 
+
+    
 }
