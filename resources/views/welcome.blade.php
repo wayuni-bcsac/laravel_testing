@@ -80,6 +80,7 @@
             @endif
 
             <div class="content">
+                <x-header name="Surfside Media" :fruits="$fruits"/>
                 <div class="title m-b-md">
                     Laravel
                 </div>
