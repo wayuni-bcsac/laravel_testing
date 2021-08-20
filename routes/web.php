@@ -31,8 +31,25 @@ Route::get('/staff','StaffController@getAllStaff');
 
 Route::get('/add-post','PostController@addPost');
 
+Route::get('/add-project/{id}','UserController@addProject');
+
 Route::post('/add-post','PostController@createPost')->name('post.add');
 
 Route::get('/add-user', 'UserController@addUserPhone');
 
 Route::get('/get-phone', 'UserController@fetchPhoneByUser');
+
+Route::get('/get-projects/{id}', 'UserController@getProjectsByUser');
+
+Route::get('/add-roles', 'RoleController@addRole');
+
+Route::get('/add-new-user', 'UserController@addUser');
+
+Route::get('/roles-by-user/{id}', 'UserController@getAllRolesByUser');
+
+Route::get('/users-by-role/{id}', 'UserController@getAllUsersByRole');
+
+
+
+
+

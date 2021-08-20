@@ -26,8 +26,19 @@ protected $fillable = [
    'email_verified_at' => 'datetime',
  ];
 
+ public function roles()
+ {
+   return $this->belongsToMany(Role::class,"role_users");
+ }
+
+ public function projects()
+ {
+   return $this->hasMany(Project::class);
+ }
+
  public function phone()
  {
-   return $this->hasOne('App\Phone');
+   return $this->hasOne(Phone::class);
  }
+
 }

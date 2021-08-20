@@ -4,14 +4,12 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Phone extends Model
+class Comment extends Model
 {
-    protected $table = "phones";
+    protected $table="comments";
 
     public function user()
     {
         return $this->belongsTo(User::class);
     }
 }
-
-
